@@ -1,0 +1,70 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
+    "spellcheck:staged": "cspell lint --dot --gitignore --color --cache --show-suggestions",
+    "commit": "czg",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meihan0922/monitor.git"
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "pnpm spellcheck:staged",
+      "prettier --cache --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "prettier --cache --write"
+    ],
+    "*.{js,jsx}": [
+      "pnpm spellcheck:staged",
+      "eslint --fix",
+      "prettier --cache --write"
+    ],
+    "*.{ts,tsx}": [
+      "pnpm spellcheck:staged",
+      "eslint --fix",
+      "prettier --cache --parser=typescript --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-conventional": "20.5.3",
+    "@eslint/js": "10.0.1",
+    "@types/node": "25.6.2",
+    "cspell": "10.0.0",
+    "cz-git": "1.13.0",
+    "czg": "^1.13.0",
+    "eslint": "10.3.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.2",
+    "eslint-plugin-simple-import-sort": "13.0.0",
+    "fast-glob": "^3.3.3",
+    "globals": "17.6.0",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.2",
+    "prettier": "3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "8.59.2"
+  },
+  "bugs": {
+    "url": "https://github.com/meihan0922/monitor/issues"
+  },
+  "homepage": "https://github.com/meihan0922/monitor#readme",
+  "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264"
+}
