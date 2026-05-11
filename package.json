@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
     "spellcheck:staged": "cspell lint --dot --gitignore --color --cache --show-suggestions",
     "commit": "czg",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -57,7 +56,7 @@
     "fast-glob": "^3.3.3",
     "globals": "17.6.0",
     "husky": "9.1.7",
-    "lint-staged": "17.0.2",
+    "lint-staged": "17.0.3",
     "prettier": "3.8.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "8.59.2"
